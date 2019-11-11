@@ -57,12 +57,15 @@ public class Main {
         BufferedReader in = new BufferedReader(new FileReader(filename));
         String line;
         while ((line = in.readLine()) != null) {
-            String[] values = line.split(",");
-            Person p = new Person(values[0], Integer.parseInt(values[1]));
-            persons.add(p);
+            persons.add(Main.parseToPerson(line));
         }
         List<Person> personsSorted = persons.stream().sorted(Comparator.comparingInt(Person::getAge)).
                 collect(Collectors.toList());
         return personsSorted;
+    }
+
+    private static Person parseToPerson(String nameAndAge) {
+        String[] values = nameAndAge.split(",");
+        return new Person(values[0], Integer.parseInt(values[1]));
     }
 }
