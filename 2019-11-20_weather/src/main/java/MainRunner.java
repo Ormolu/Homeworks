@@ -3,7 +3,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.net.URL;
 
-public class Main {
+public class MainRunner {
     public static void main(String[] args) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
 

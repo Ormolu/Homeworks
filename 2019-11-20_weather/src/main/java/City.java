@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class City {
     private String name;
     private int id;
-    private float temp;
+    private String temp;
 
-    public City(String name, int id, float temp) {
+    public City(String name, int id, String temp) {
         this.name = name;
         this.id = id;
         this.temp = temp;
@@ -31,11 +31,11 @@ public class City {
         this.id = id;
     }
 
-    public float getTemp() {
+    public String getTemp() {
         return temp;
     }
 
-    public void setTemp(float temp) {
+    public void setTemp(String temp) {
         this.temp = temp;
     }
 
